@@ -53,4 +53,7 @@ Nomster2::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  # my stuff for nomster
+  root 'places#index'
 end
