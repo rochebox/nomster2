@@ -2,15 +2,46 @@
 /* my styles */
 
 
+body {
+  background-image:  url('/assets/fork_knife2.png'), url('/assets/blue_white_tablecloth.jpg');
+  background-position: left_bottom, left top;
+  background-repeat: no-repeat, repeat;
+  /* background: url('/assets/blue_white_tablecloth.jpg'); */
+  /* a font stack from Chris Coiyers CSS Tricks article */
+ 
+
+ /* Modern Georgia-based serif stack */
+/* font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif; */
+
+/* Traditional Garamond-based serif stack */
+font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif; 
+
+/* Helvetica/Arial-based sans serif stack */
+/*font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif; */
+
+/* Verdana-based sans serif stack */
+/*font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif; */
+
+/* Trebuchet font family stack */
+/* font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif; */
+
+}
+
+
 h1, h2, h3, h4, h5, h6 {
   margin:0;
   padding:0;
 }
 
 .booyah-box {
-  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
-  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
-  box-shadow: 1px 1px 2px 0 #d0d0d0;
+  /*-moz-box-shadow: 1px 1px 2px 0 #d0d0d0; */
+  /*-webkit-box-shadow: 1px 1px 2px 0 #d0d0d0; */
+  /* box-shadow: 1px 1px 2px 0 #d0d0d0; */
+
+   -moz-box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.5); 
+ 	 -webkit-box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.5); 
+     box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.5); 
+
   /* background: #fff; */
   /* background: #4a8dac; */
   background: #00e6e6;
@@ -24,6 +55,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+
 .test {
 	color: #fc4a1a;
 }
+
+
+/* bootstrap override */
+.navbar.navbar-inverse {
+    /* background:url('/assets/orange_background.jpg'); */
+    background-image:url('/assets/orange_background5.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    border-radius: 0;
+    /* box-shadow: 10px 10px grey; */
+    /* box-shadow: 0px 1px 3px #2a2a2a; */
+
+     -moz-box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.5); 
+ 	 -webkit-box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.5); 
+     box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.5); 
+
+    /* box-shadow: 8px 8px 4px #888888; */
+}
+
