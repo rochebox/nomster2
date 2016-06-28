@@ -1,4 +1,6 @@
 Nomster2::Application.configure do
+  #Firehose Lesson 16 -- Setting up Devise
+  config.action_mailer.default_url_options = { host: 'nomster2-rochebox.herokuapp.com' }
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.

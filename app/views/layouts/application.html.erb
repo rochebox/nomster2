@@ -46,6 +46,14 @@
 			</div>	<!-- "container fluid... div" ends-->
 		</nav>
 
+		<% if notice.present? %>
+			<p class="alert alert-info col-xs-8 col-xs-offset-2"><%= notice %></p>
+		<% end %>
+
+		<% if alert.present? %>
+			<p class="alert alert-danger col-xs-8 col-xs-offset-2"><%= alert %></p>
+		<% end %>
+
 		<%= yield %>
 
 	</body>
