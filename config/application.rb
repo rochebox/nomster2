@@ -19,5 +19,12 @@ module Nomster2
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+
+    # Add the fonts path
+    config.assets.paths << "#{Rails.root}/app/assets/fonts"
+
+    # Precompile additional [font] assets...
+    config.assets.precompile += %w( .svg .eot .woff .tff)
+    
   end
 end

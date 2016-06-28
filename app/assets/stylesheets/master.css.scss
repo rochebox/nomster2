@@ -44,7 +44,9 @@ h1, h2, h3, h4, h5, h6 {
 
   /* background: #fff; */
   /* background: #4a8dac; */
-  background: #00e6e6;
+  /* background: #00e6e6; */
+  /* background: #097054;*/
+  background: #669900;
   border: 1px solid #ccc;
   border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
   border-radius: 15px;
@@ -56,9 +58,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
-.test {
-	color: #fc4a1a;
-}
+
 
 
 /* bootstrap override */
@@ -78,3 +78,20 @@ h1, h2, h3, h4, h5, h6 {
     /* box-shadow: 8px 8px 4px #888888; */
 }
 
+.navbar-inverse .navbar-brand {
+	padding-top: 15px;  
+	/* font-family: 'gooddogregular', sans-serif; */
+	 /* font-family: 'sf_speakeasyregular', sans-serif;*/ 
+	 font-family: 'sf_speakeasyoblique', sans-serif; 
+	font-size: 50px;
+	background-color: #0033CC;
+  	color: #0099FF;
+  	/* height: 70px; */
+}
+
+.restaurant {
+	/* color: #fc4a1a; */
+	color: #990033;
+	font-family: 'sf_speakeasyoblique', sans-serif; 
+
+}
