@@ -19,15 +19,24 @@
 						<span class="icon-bar"></span>
 					</button>
 					<!--Penguins-->
-					<a class="navbar-brand" href="http://penguins.nhl.com/index.html">Rochebox Dining Guide </a>
+					<!-- below is a ruby link replacing this...an html A tag -->
+					<%= link_to 'Rochebox Dining Guide', root_path, class: 'navbar-brand' %>
 				</div>
 
 				<!--Ken cuts it down a lot from the Twitter Bootstrap Model -->
 				<!-- Note is Collect Nav Links, fore and stuff for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
-						<!--Sharks-->
-						<li class="active"><a href="http://sharks.nhl.com/">Link</a></li>	
+						<li>
+							
+							 <%= link_to new_place_path do %>
+   							 	<i class="glyphicon glyphicon-plus-sign"></i>
+  							 	 New Place
+  							 	 <i class="glyphicon glyphicon glyphicon-eye-open"></i>
+  							 	 <i class="glyphicon glyphicon-glass"></i>
+  							 	 <i class="glyphicon glyphicon-user"></i>
+ 							 <% end %>
+						</li>	
 					</ul> <!-- nav navbar-nav -->
 
 					<ul class="nav navbar-nav navbar-right">
