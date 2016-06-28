@@ -56,4 +56,5 @@ Nomster2::Application.routes.draw do
 
   # my stuff for nomster
   root 'places#index'
+  resources :places
 end

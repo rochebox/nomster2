@@ -97,6 +97,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* will_paginate bootstrap override... */
-.paginate {
-  color: red;
+
+
+
+
+.brand-font{
+  font-family: 'sf_speakeasyoblique', sans-serif; 
+}
+
+.red-color{
+  color: #990033;
+}
+.light-blue-color{
+  color: #0099FF;
+}
+.text-shadow-red{
+  text-shadow: 3px 3px #990033;
 }

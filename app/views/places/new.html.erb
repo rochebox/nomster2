@@ -1,0 +1,14 @@
+<!-- its the form page -->
+
+<div class="booyah-box col-xs-8 col-xs-offset-2">
+  <h1 class="brand-font light-blue-color text-shadow-red">Enter Your Place Details...Here!</h1>
+
+ 
+  <%= simple_form_for @place do |f| %>
+      	<%= f.input :name %>
+    	<%= f.input :address %>
+    	<%= f.input :description %>
+    	<br />
+    	<%= f.submit 'Create', class: 'btn btn-primary' %>
+	<% end %>
+</div>
