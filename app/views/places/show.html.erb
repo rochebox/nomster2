@@ -6,6 +6,36 @@
 	<i><%= @place.address %></i>
 	<br/><br/>
 	<p><%= @place.description %></p>
+    <br />
+	<!--here come the tags to place a google map Lesson 30 -->
+	<% if @place.latitude.present? && @place.longitude.present? %>
+		    <script>
+
+		      function initMap() {
+		        var myLatLng = {lat: <%= @place.latitude %>, lng: <%= @place.longitude %>};
+
+		        var map = new google.maps.Map(document.getElementById('map'), {
+		          zoom: 17,
+		          center: myLatLng
+		        });
+
+		        var marker = new google.maps.Marker({
+		          position: myLatLng,
+		          map: map,
+		          title: 'Hello World!'
+		        });
+		      }
+		    </script>
+		    <script async defer
+		    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzSJ-karImYqxutzcv3rCOwtyL7VCy2pk&callback=initMap">
+		    </script>
+
+		    <!-- moved from top in example... -->
+			<div id="map"></div>
+<% end %>
+
+<br />
+
 	<div class="pull-right">
 		<% if current_user && current_user == @place.user %>
    		 <%= link_to 'Edit', edit_place_path(@place), class: 'btn btn-primary btn-lg' %>
