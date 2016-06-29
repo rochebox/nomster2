@@ -1,0 +1,13 @@
+<!-- view for editing a place entry -->
+<div class="booyah-box col-xs-8 col-xs-offset-2">
+  <h1 class="brand-font light-blue-color text-shadow-red heading-size">Make a change -- Edit Your Place!</h1>
+
+ 
+  <%= simple_form_for @place do |f| %>
+      	<%= f.input :name %>
+    	<%= f.input :address %>
+    	<%= f.input :description %>
+    	<br />
+    	<%= f.submit 'Update', class: 'btn btn-primary btn-lg' %>
+	<% end %>
+</div>
