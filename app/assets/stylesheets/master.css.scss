@@ -189,12 +189,21 @@ blockquote {
 blockquote p {
   display: inline;
 }
+.sm-rotate{
+  
+}
 
-blockquote:hover
-{
+.sm-rotate:hover {
     cursor: default;
     transform: rotate(-10deg);
     transition: all 0.3s ease-in-out 0s;
+}
+
+.sm-grow{
+  
+}
+.sm-grow:hover{
+  transform: scale3d(1.25, 1.25, 1);
 }
 
 /*blockquote:before, blockquote:after { */
