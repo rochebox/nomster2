@@ -150,22 +150,68 @@ h1, h2, h3, h4, h5, h6 {
     clear: both;
 }
 
+.more-round{
+  /* border-radius: 15px; */
+  border-radius: 15px 50px 30px 5px;
+}
+
+.light-blue-color-bg {
+  background-color: #399cf9;
+}
+
+
 blockquote {
+  position: relative;
   background: #f9f9f9;
-  border-left: 10px solid #ccc;
+  /* border-left: 10px solid #ccc; */
+  border-left: 10px solid #399cf9;
   margin: 1.5em 10px;
-  padding: 0.5em 10px;
+  padding: 0.5em 10px 0.5em 20px;
   quotes: "\201C""\201D""\2018""\2019";
+  /* text-indent: 15px; */
 }
-blockquote:before {
-  color: #ccc;
-  content: open-quote;
-  font-size: 4em;
-  line-height: 0.1em;
+  blockquote:before {
+  position: absolute;
+  top: 43px;
+  left: 0px;
+  margin-top: -30px; 
+  font-family: 'Times New Roman';
+  /* color: #ccc;  */
+  color: #ff9900; 
+  content: "\201C";
+  /* content: open-quote; */
+  font-size: 4.0em; 
+  line-height: 0.1em; 
   margin-right: 0.25em;
-  vertical-align: -0.4em;
-}
+  vertical-align: -0.4em; 
+
+} 
 blockquote p {
   display: inline;
 }
 
+blockquote:hover
+{
+    cursor: default;
+    transform: rotate(-10deg);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+/*blockquote:before, blockquote:after { */
+/*    position: absolute; */
+/*    width: 60px; */
+/*    height: 60px; */
+/*    font-size: 120px; */
+/*    line-height: 1; */
+/*    font-family: 'Times New Roman';*/
+/*} */
+/*blockquote:before { */
+/*    top: 0; */
+/*    left: 0; */
+/*    content: "\201C"; */
+/*} */
+/*blockquote:after { */
+/*    top: 0; */
+/*    right: 0; */
+/*    content: "\201D";*/
+/*} */
