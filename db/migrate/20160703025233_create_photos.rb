@@ -3,6 +3,7 @@ class CreatePhotos < ActiveRecord::Migration
     create_table :photos do |t|
 
     	#photo information?	
+      t.file :photo
     	t.text :caption
 
     	t.integer :user_id

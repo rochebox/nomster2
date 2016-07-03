@@ -10,6 +10,7 @@ class PlacesController < ApplicationController
 
 	def new
 		@place = Place.new
+		#@photo = Photo.new
 	end
 
 	def create
@@ -21,11 +22,13 @@ class PlacesController < ApplicationController
 		else
 			render :new, status: :unprocessable_entity
 		end
+		
 	end
 
 	def show
 		@place = Place.find(params[:id])
 		@comment = Comment.new
+		
 	end
 
 	def edit

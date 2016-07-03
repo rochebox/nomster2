@@ -2,6 +2,7 @@ class Place < ActiveRecord::Base
 	belongs_to :user
 	has_many :comments
 	has_many :photos
+	accepts_nested_attributes_for :photos
 	
 	geocoded_by :address
   	after_validation :geocode

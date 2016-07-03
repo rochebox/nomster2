@@ -10,5 +10,21 @@
     	<%= f.input :description %>
     	<br />
     	<%= f.submit 'Create', class: 'btn btn-primary btn-lg' %>
+
+
+    	<h2 class="center-it brand-font light-blue-color text-shadow-red ">Do you have any photos... add them here! </h2>
+    	 <%= f.simple_fields_for :photos do |p| %>
+        	<%= p.input :@photo.caption %>
+        	<%= p.submit 'Add a Photo!', class: 'btn btn-primary btn-lg' %>
+      <% end %>
+
+ 
+
+
+    	
 	<% end %>
+
+
+
+	
 </div>
