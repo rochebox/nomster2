@@ -70,9 +70,7 @@ class PlacesController < ApplicationController
 		params.require(:place).permit(:name, :description, :address)
 	end
 
-	def last_comment
- 	  @place.comments.order("id ASC").last
-	end
+	
 
 
 
