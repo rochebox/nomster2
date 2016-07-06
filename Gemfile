@@ -39,6 +39,8 @@ gem 'simple_form'
 gem 'devise', '>= 3.2.4'
 gem "geocoder", "1.3.4"
 gem "figaro", ">= 1.0.0"
+gem 'carrierwave', '0.11.0'
+gem 'mini_magick', '~> 4.3'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
