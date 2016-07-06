@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.4'
 
-# Use postgresql as the database for Active Record
+#  postgresql as the database for Active Record
 gem 'pg'
 
 # Use SCSS for stylesheets
@@ -40,7 +40,8 @@ gem 'devise', '>= 3.2.4'
 gem "geocoder", "1.3.4"
 gem "figaro", ">= 1.0.0"
 gem 'carrierwave', '0.11.0'
-gem 'mini_magick', '~> 4.3'
+gem "mini_magick"
+gem "fog"
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
