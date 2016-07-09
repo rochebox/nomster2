@@ -1,3 +1,5 @@
+
+
 Nomster2::Application.routes.draw do
   devise_for :users
   # my stuff for nomster
@@ -6,6 +8,8 @@ Nomster2::Application.routes.draw do
     resources :comments, only: :create
     resources :photo2s, only: :create
   end
+  # Added with Lesson 47
+  resources :users, only: :show
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
