@@ -1,1 +1,46 @@
-<h1>User Dashboard</h1>
+
+
+<div class="booyah-box col-xs-8 col-xs-offset-2">
+
+	<h1 class="brand-font light-blue-color text-shadow-red user-page-heading-size"><%= @user.email %></h1>
+	<h3 class="nomster-text-font">
+		Member Since: <%= @user.created_at.strftime("%B %d, %Y") %> 
+	</h3>
+	<!-- section for total comments -->
+	<% if @user.comments.count == 0 %>
+		<h4 class="nomster-text-font nomster-red-color">
+			<%= @user.comments.count %> comments so far. ...add a comment!
+		</h4>
+	<% elsif @user.comments.count == 1 %>
+		<h4 class="nomster-text-font nomster-red-color">
+			<%= @user.comments.count %> comment so far. ...add more comments!
+		</h4>
+	<% else %>
+	    <h4 class="nomster-text-font nomster-red-color">
+			<%= @user.comments.count %> total comments. ... way to go!
+		</h4>
+	<% end %>
+
+	<!-- section for total reviews (new places made) -->
+	<% if @user.comments.where(rating: '5_stars').count == 1 %>
+		<h4 class="nomster-text-font"><%= @user.comments.where(rating: '5_stars').count %> total 5 star review so far!
+			<i class="glyphicon glyphicon-star nomster-gold-star"></i>
+			<i class="glyphicon glyphicon-star nomster-gold-star"></i>
+			<i class="glyphicon glyphicon-star nomster-gold-star"></i>
+			<i class="glyphicon glyphicon-star nomster-gold-star"></i>
+			<i class="glyphicon glyphicon-star nomster-gold-star"></i>
+
+		</h4>
+	<% else %>
+		<h4 class="nomster-text-font"><%= @user.comments.where(rating: '5_stars').count %> total 5 star reviews!
+					<i class="glyphicon glyphicon-star nomster-gold-star"></i>
+					<i class="glyphicon glyphicon-star nomster-gold-star"></i>
+					<i class="glyphicon glyphicon-star nomster-gold-star"></i>
+					<i class="glyphicon glyphicon-star nomster-gold-star"></i>
+					<i class="glyphicon glyphicon-star nomster-gold-star"></i> 
+
+		</h4>
+	<% end %>
+	
+
+</div>
