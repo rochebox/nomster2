@@ -1,0 +1,134 @@
+
+<!-- Twitter Bootstrap Carousel Tags and styling -->
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+
+  	<!-- slider 1 -->
+    <div class="item active ">
+      <%= image_tag 'slider1pano.jpg', class: 'img-responsive' %>
+      <div class="carousel-caption">
+        Find Amazing Dishes!!!
+      </div>
+    </div>
+
+	<!-- slider 2 -->
+    <div class="item ">
+      <%= image_tag 'slider2pano.jpg', class: 'img-responsive' %>
+      <div class="carousel-caption">
+        Great cuisine!!!
+      </div>
+    </div>
+
+	<!-- slider 3 -->
+    <div class="item ">
+      <%= image_tag 'slider3pano.jpg', class: 'img-responsive' %>
+      <div class="carousel-caption">
+        Amazing chefs!!!
+      </div>
+    </div>
+    
+    <!-- slider 4 -->
+    <div class="item ">
+      <%= image_tag 'slider6.jpg', class: 'img-responsive' %>
+      <div class="carousel-caption">
+        Great restaruants!!!
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div>
+
+<div class="clear-it"><br /></div>
+
+<div class="col-md-12 ">
+    <div class="carousel slide" id="myCarousel">
+      <div class="carousel-inner">
+        <div class="item active">
+          <div class="col-xs-3">
+              <%= image_tag 'slider1.jpg', class: 'img-responsive' %>
+              <div class="carousel-caption">
+                Find Amazing Dishes!!!
+              </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="col-xs-3">
+             <%= image_tag 'slider2.jpg', class: 'img-responsive' %>
+              <div class="carousel-caption">
+                Great cuisine!!!
+              </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="col-xs-3"><a href="#"><img src="http://placehold.it/500/eeeeee&amp;text=3" class="img-responsive"></a></div>
+        </div>
+        <div class="item">
+          <div class="col-xs-3"><a href="#"><img src="http://placehold.it/500/f4f4f4&amp;text=4" class="img-responsive"></a></div>
+        </div>
+        <div class="item">
+          <div class="col-xs-3"><a href="#"><img src="http://placehold.it/500/f566f5/333&amp;text=5" class="img-responsive"></a></div>
+        </div>
+        <div class="item">
+          <div class="col-xs-3"><a href="#"><img src="http://placehold.it/500/f477f4/fff&amp;text=6" class="img-responsive"></a></div>
+        </div>
+        <div class="item">
+          <div class="col-xs-3"><a href="#"><img src="http://placehold.it/500/eeeeee&amp;text=7" class="img-responsive"></a></div>
+        </div>
+        <div class="item"
+          <div class="col-xs-3"><a href="#"><img src="http://placehold.it/500/fcfcfc/333&amp;text=8" class="img-responsive"></a></div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+    </div>
+</div>
+
+
+<!-- code to display a listing of the places  from early Nomster lessons -->
+<% @places.each do |place| %>
+	<div class="booyah-box col-xs-8 col-xs-offset-2">
+		<h1 class="restaurant"><%= link_to place.name, place_path(place) %></h1> 
+		<i><%= place.address %></i><br /><br />
+		<p><%= place.description %></p><br />
+
+		 <% if place.user.present? %>
+     		 <small><%= place.user.email %></small>
+   		 <% end %>
+   		 <% if place.comments.present? %>
+   		 	<div class="col-xs-12 ">
+				  <blockquote class="sm-grow">
+				  	
+				    <% if place.comments.order("id ASC").last.humanized_rating.present? %>
+				      <b><%= place.comments.order("id ASC").last.humanized_rating %></b> -
+				    <% end %>
+				   
+				    <%= place.comments.order("id ASC").last.message %>
+				   
+				    <small><%= place.comments.order("id ASC").last.user.email %></small>
+				  </blockquote>
+			</div>
+		<% end %>	
+	</div>
+
+	
+<% end %>
+
+<div class="col-xs-8 col-xs-offset-2 brand-font">
+<%= will_paginate @places, renderer: BootstrapPagination::Rails %>
+</div>

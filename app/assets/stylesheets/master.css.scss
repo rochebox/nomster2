@@ -1,5 +1,20 @@
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
 
 /* my styles */
+/* dark purple like background for nav --> 08045a */
+/* Navy 00293c */
+/* table cloth blue is --> 558de2  (dark) */
+/* cobalt --> 3a5199 */
+/* or --> 8db0f2 (light) */
+/* carrot color #EE693f */
+/* tangerine #F69454 */
+/* pumpkin d55448 */
+/* berry a10115 */
+/* cherry d72c16 */
+/* fire engine red c5001a */
+/* yellows */
+/* ffcc00 */
+
 
 
 body {
@@ -34,9 +49,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .booyah-box {
-  /*-moz-box-shadow: 1px 1px 2px 0 #d0d0d0; */
-  /*-webkit-box-shadow: 1px 1px 2px 0 #d0d0d0; */
-  /* box-shadow: 1px 1px 2px 0 #d0d0d0; */
 
    -moz-box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.5); 
  	 -webkit-box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.5); 
@@ -46,7 +58,16 @@ h1, h2, h3, h4, h5, h6 {
   /* background: #4a8dac; */
   /* background: #00e6e6; */
   /* background: #097054;*/
-  background: #669900;
+  /* background: #669900; */
+  /* berry */
+  /* background: #a10115;*/
+  /* salmony red */
+  /* background: #f75e5e; */
+  /* green */
+  /* background: #7bc14c; */
+  /* maize yellow */
+  background: #ffcc00;
+  background-image:url('/assets/gold_background3.jpg');
   border: 1px solid #ccc;
   border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
   border-radius: 15px;
@@ -61,7 +82,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #FFEEEE;
   border-radius: 3px;
   padding:8px;
-}
+  }
 
 .has-error{
   /* background-color: #00ff00; */
@@ -88,8 +109,10 @@ h1, h2, h3, h4, h5, h6 {
 .navbar.navbar-inverse {
     /* background:url('/assets/orange_background.jpg'); */
     background-image:url('/assets/orange_background5.jpg');
-    background-repeat:no-repeat;
-    background-size:cover;
+    /* trying denim color */
+    background: #08045a;
+    /* background-repeat:no-repeat; */
+    /* background-size:cover; */
     border-radius: 0;
     /* box-shadow: 10px 10px grey; */
     /* box-shadow: 0px 1px 3px #2a2a2a; */
@@ -107,17 +130,68 @@ h1, h2, h3, h4, h5, h6 {
 	 /* font-family: 'sf_speakeasyregular', sans-serif;*/ 
 	 font-family: 'sf_speakeasyoblique', sans-serif; 
 	font-size: 50px;
-	background-color: #0033CC;
-  	color: #0099FF;
+	/* background-color: #0033CC; */
+  /* table cloth blue is --> 558de2  (dark) */
+  /* or --> 8db0f2 (light) */
+
+  	color: #8db0f2;
   	/* height: 70px; */
 }
 
-.restaurant {
+.navbar-inverse .navbar-brand:hover{
+  /* lighter bluew related to 8db0f2 */
+
+  color: #cddefd;
+}
+
+
+
+.restaurant-listing-styles {
 	/* color: #fc4a1a; */
-	color: #990033;
+	/* color: #990033; */
+  /* color: #8db0f2; */
+  /* color: #9fbffd; */
+  /* color: #7ba7fb;  usable like the light blue */
+  color: #399cf9;
 	font-family: 'sf_speakeasyoblique', sans-serif; 
+  text-shadow: 1px 1px #08045a;
+  font-size: 2.5em;
+  /* ... from brand-font light-blue-color text-shadow-red */
 
 }
+
+.restaurant-link-styles{
+  /* color: #399cf9;  blue like the border */
+  /* color: #58a8fb; */
+  color: 8db0f2;
+  font-family: 'sf_speakeasyoblique', sans-serif; 
+  text-shadow: 2px 2px #08045a;
+  font-size: 1.3em;
+}
+
+.restaurant-link-styles:link {
+    text-decoration: none;
+
+}
+
+.restaurant-link-styles:visited {
+    text-decoration: none;
+    /* color: #c5001a; tried red but its too much */
+    color: #8db0f2;
+
+}
+
+.restaurant-link-styles:hover {
+    text-decoration: none;
+    color: #6897f0;
+}
+
+.restaurant-link-styles:active {
+    text-decoration: none;
+    color: #399cf9;
+}
+
+
 
 /* will_paginate bootstrap override... */
 
@@ -129,13 +203,32 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .red-color{
-  color: #990033;
+  /* color: #990033; moving to orange
+  /* carrot color #EE693f */
+  /* tangerine #F69454 */
+  /* pumpkin d55448 */
+  color: #d55448;
+
 }
 .light-blue-color{
-  color: #0099FF;
+  /* color: #0099FF; moving to table cloth blue */
+  color: #8db0f2;
 }
+.light-blue-background{
+  background: #8db0f2;
+}
+
+.dark-blue-background{
+  background: #558de2;
+}
+
 .text-shadow-red{
-  text-shadow: 3px 3px #990033;
+  /* text-shadow: 3px 3px #990033; moving to orange-pumpkin */
+  /* text-shadow: 3px 3px #d55448; */
+  /* trying blue cobalt */
+  /* text-shadow: 3px 3px #3a5199; */
+   text-shadow: 3px 3px #08045a;
+   
 }
 
 .heading-size{
@@ -157,6 +250,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .light-blue-color-bg {
   background-color: #399cf9;
+}
+
+.no-bottom-margin{
+  margin-bottom: 0;
 }
 
 
@@ -205,12 +302,15 @@ blockquote p {
 .sm-grow:hover{
   transform: scale3d(1.25, 1.25, 1);
 }
+
 .center-it{
   text-align: center;
 }
+
 .photo-size{
   width: 150px;
 }
+
 .photo-box{
   height: 200px;
   margin: 0;
@@ -223,21 +323,105 @@ blockquote p {
   padding: 0;
 }
 
-/*blockquote:before, blockquote:after { */
-/*    position: absolute; */
-/*    width: 60px; */
-/*    height: 60px; */
-/*    font-size: 120px; */
-/*    line-height: 1; */
-/*    font-family: 'Times New Roman';*/
-/*} */
-/*blockquote:before { */
-/*    top: 0; */
-/*    left: 0; */
-/*    content: "\201C"; */
-/*} */
-/*blockquote:after { */
-/*    top: 0; */
-/*    right: 0; */
-/*    content: "\201D";*/
-/*} */
+.carousel-inner > .item > img, .carousel-inner > .item > a > img { 
+   /* max-height: 550px; */
+   max-height: 400px; 
+    width: 100%;
+
+}
+
+.carousel-caption {
+    font-family: 'Poiret One', cursive;
+    /* font-family: 'Helvetica Neue', Helvetica, sans-serif; */ 
+    /* font-family: 'bilbo-regular', Helvetica, sans-serif; */
+    font-size: 60px;
+    font-weight:100;
+    text-shadow: rgba(0,0,0,0.95) 2px 2px;
+    background-color: rgba(0,0,0,0.5);
+    width:100%;
+    position:absolute;
+    left:0;
+}
+
+.carousel {
+  box-shadow: 0px 3px 8px #2a2a2a;
+}
+
+.nav-sign-in-fonts{
+   font-family: 'Poiret One', cursive;
+   /* font-family: 'Helvetica Neue', Helvetica, sans-serif; */
+   font-size: 1em;
+   font-style: italic; 
+}
+
+.form-styles {
+   font-family: 'Poiret One', cursive;
+   /* font-family: 'Helvetica Neue', Helvetica, sans-serif; */
+   font-size: 1.1em;
+   font-style: normal;
+   font-style: italic;  
+   /* fire engine red c5001a */
+   color: #c5001a;
+}
+
+.index-place{
+   font-family: 'Poiret One', cursive;
+   /* font-family: 'Helvetica Neue', Helvetica, sans-serif; */
+   font-size: 1.1em;
+   font-style: bold;
+   font-style: italic;  
+   /* fire engine red c5001a */
+   color: #c5001a;
+}
+.index-description{
+  font-family: 'Poiret One', cursive;
+  /* font-family: 'Helvetica Neue', Helvetica, sans-serif; */
+  color: #08045a;
+}
+
+.nomster-button-styles{
+  font-family: 'Poiret One', cursive;
+  /* font-family: 'Helvetica Neue', Helvetica, sans-serif; */
+  font-style: italic;
+  background: #2d68c1;
+  /* background: #558de2; */
+ /* background: #08045a;  this seems dark */
+  color: #ccc;
+}
+
+.nomster-button-styles:hover{
+   /* background: #08045a; */
+   background: #2d68c1;
+   color: white;
+}
+
+.devise-render a{
+ font-family: 'Poiret One', cursive;
+ /* font-family: 'Helvetica Neue', Helvetica, sans-serif; */
+ font-style: italic; 
+ color: ccc;
+ 
+}
+
+.devise-render a:link {
+    text-decoration: none;
+    font-family: 'Poiret One', cursive;
+    /* font-family: 'Helvetica Neue', Helvetica, sans-serif; */
+    font-style: italic; 
+    color: ccc;
+}
+
+.devise-render a:visited {
+    text-decoration: none;
+}
+
+.devise-render a:hover {
+    text-decoration: none;
+    color: #08045a;
+}
+
+.devise-render a:active {
+    text-decoration: none;
+    color: #08045a;
+}
+

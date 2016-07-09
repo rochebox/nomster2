@@ -13,32 +13,32 @@
   <div class="carousel-inner">
 
   	<!-- slider 1 -->
-    <div class="item active">
-      <%= image_tag 'slider1.jpg' %>
+    <div class="item active ">
+      <%= image_tag 'slider1pano.jpg', class: 'img-responsive' %>
       <div class="carousel-caption">
         Find Amazing Dishes!!!
       </div>
     </div>
 
 	<!-- slider 2 -->
-    <div class="item">
-      <%= image_tag 'slider2.jpg' %>
+    <div class="item ">
+      <%= image_tag 'slider2pano.jpg', class: 'img-responsive' %>
       <div class="carousel-caption">
         Great cuisine!!!
       </div>
     </div>
 
 	<!-- slider 3 -->
-    <div class="item">
-      <%= image_tag 'slider3.jpg' %>
+    <div class="item ">
+      <%= image_tag 'slider3pano.jpg', class: 'img-responsive' %>
       <div class="carousel-caption">
         Amazing chefs!!!
       </div>
     </div>
     
     <!-- slider 4 -->
-    <div class="item">
-      <%= image_tag 'slider4.jpg' %>
+    <div class="item ">
+      <%= image_tag 'slider4pano.jpg', class: 'img-responsive' %>
       <div class="carousel-caption">
         Great restaruants!!!
       </div>
@@ -55,15 +55,18 @@
 </div>
 
 
+
 <!-- code to display a listing of the places  from early Nomster lessons -->
 <% @places.each do |place| %>
 	<div class="booyah-box col-xs-8 col-xs-offset-2">
-		<h1 class="restaurant"><%= link_to place.name, place_path(place) %></h1> 
-		<i><%= place.address %></i><br /><br />
-		<p><%= place.description %></p><br />
+		<!-- h1 class="restaurant" -->
+    <h1 class="restaurant-listing-styles" >
+      <%= link_to place.name, place_path(place), :class => 'restaurant-link-styles' %></h1> 
+		<i class="index-place"><%= place.address %></i><br />
+		<p class="index-description"><%= place.description %></p><br />
 
 		 <% if place.user.present? %>
-     		 <small><%= place.user.email %></small>
+     		 <small class="index-description"><%= place.user.email %></small>
    		 <% end %>
    		 <% if place.comments.present? %>
    		 	<div class="col-xs-12 ">

@@ -5,21 +5,23 @@
 	<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
 	  <%= f.error_notification %>
 
-	  <div class="form-inputs">
+	  <div class="form-inputs form-styles">
 	    <%= f.input :email, required: true, autofocus: true %>
 	    <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
 	    <%= f.input :password_confirmation, required: true %>
 	  </div>
 	  <br />
 	  <div class="form-actions">
-	    <%= f.button :submit, "Sign up!", class: 'btn btn-primary btn-lg' %>
+	    <%= f.button :submit, "Sign up!", class: 'btn btn-primary btn-lg nomster-button-styles' %>
 	  </div>
 	<% end %>
 	<br />
 	
 	<% wanted = 0 %>
     <% if wanted == 1 %>
-		<%= render "devise/shared/links" %>
+    	<div class="devise-render">	
+			<%= render "devise/shared/links" %>
+		</div>
 	<% end %>	
 	
 </div>

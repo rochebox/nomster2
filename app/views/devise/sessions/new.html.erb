@@ -1,19 +1,21 @@
-
 <!-- this is the new_html in app-views-devise-sessions ITS FOR SIGN IN-->
 <div class="booyah-box col-xs-8 col-xs-offset-2">
 	<h2 class="brand-font light-blue-color text-shadow-red heading-size" >Sign in</h2>
 	<br />
 	<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-	  <div class="form-inputs">
+	  <div class="form-inputs form-styles">
 	    <%= f.input :email, required: false, autofocus: true %>
 	    <%= f.input :password, required: false %>
 	    <!-- we removed the remember me f.input line... --> 
 	  </div>
 	  <br />
 	  <div class="form-actions">
-	    <%= f.button :submit, "Sign in", class: 'btn btn-primary btn-lg' %>
+	    <%= f.button :submit, "Sign in", class: 'btn btn-primary btn-lg nomster-button-styles' %>
 	  </div>
 	<% end %>
 	<br />
-	<%= render "devise/shared/links" %>
+	
+	<div class="devise-render">
+		<%= render "devise/shared/links" %>
+	</div>
 </div>

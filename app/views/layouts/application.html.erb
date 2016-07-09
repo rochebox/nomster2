@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	  <title>Nomster-Rochebox-Great-Restaurants</title>
+	  <title>Nomster-Rochebox-Great-Restaurants!</title>
 	  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
 	  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 	  <%= csrf_meta_tags %>
 	</head>
 	<body>
-		<nav class="navbar navbar-inverse" role="navigation">
+		<nav class="navbar navbar-inverse no-bottom-margin" role="navigation">
 			<div class="container-fluid">
 
 				<!-- they note: brand and toggle grouped for better mobile display -->
@@ -17,10 +17,10 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
-					</button>
-					<!--Penguins-->
+					</button>!
+					
 					<!-- below is a ruby link replacing this...an html A tag -->
-					<%= link_to 'Rochebox Dining Guide', root_path, class: 'navbar-brand' %>
+					<%= link_to 'Nomster', root_path, class: 'navbar-brand' %>
 				</div>
 
 				<!--Ken cuts it down a lot from the Twitter Bootstrap Model -->
@@ -31,7 +31,7 @@
 							
 							 <%= link_to new_place_path do %>
    							 	<i class="glyphicon glyphicon-plus-sign"></i>
-  							 	 New Place
+  							 	 <span class="nav-sign-in-fonts"> New Place </span>
   							 	 <i class="glyphicon glyphicon glyphicon-eye-open"></i>
   							 	 <i class="glyphicon glyphicon-glass"></i>
   							 	 <i class="glyphicon glyphicon-user"></i>
@@ -41,12 +41,12 @@
 
 					<ul class="nav navbar-nav navbar-right">
 						<% if user_signed_in? %>
-       						 <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
+       						 <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete , class: 'nav-sign-in-fonts' %></li>
      					 <% else %>
-       						 <li><%= link_to 'Sign in', new_user_session_path %></li>
-       						 <li><%= link_to 'Sign up', new_user_registration_path %></li>
+       						 <li><%= link_to 'Sign in', new_user_session_path , class: 'nav-sign-in-fonts' %></li>
+       						 <li><%= link_to 'Sign up', new_user_registration_path, class: 'nav-sign-in-fonts' %></li>
       					<% end %>
-						<li class="active"><a href="http://canadiens.nhl.com/">Link</a></li>
+						<!--li class="active"><a href="http://canadiens.nhl.com/">Link</a></li-->
 					</ul> <!--nav navbar-nav navbar-right-->
 				</div> <!-- collapse navbar collapse...-->
 			</div>	<!-- "container fluid... div" ends-->
