@@ -49,5 +49,21 @@
 			</h4>
 		<% end %>
 	</div>
-	<div class="clear"></div>
+	
 </div>
+<div class="clear"></div>
+<br /><br />
+<h1 class="text-center brand-font light-blue-color text-shadow-red">My Comments</h1>
+<br /><br />
+<% @user.comments.each do |comment| %>
+   <div class ="col-xs-12 col-sm-6">
+   	    <h2 class="text-center nomster-text-font"><%= link_to comment.place.name, place_path(comment.place) %></h2>
+		<blockquote class="sm-rotate">
+			<% if comment.humanized_rating.present? %>
+				<b><%= comment.humanized_rating %></b> -
+			<% end %>	
+			<%= comment.message %>
+			<small><%= comment.user.email %></small>
+		</blockquote>
+	</div>
+<% end %>
