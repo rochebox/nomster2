@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Poiret+One);
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:400,600);
 
 /* my styles */
 /* dark purple like background for nav --> 08045a */
@@ -208,11 +209,15 @@ h1, h2, h3, h4, h5, h6 {
   /* tangerine #F69454 */
   /* pumpkin d55448 */
   color: #d55448;
-
 }
+
 .light-blue-color{
   /* color: #0099FF; moving to table cloth blue */
   color: #8db0f2;
+}
+
+.dark-blue-color{
+  color: #08045a;
 }
 .light-blue-background{
   background: #8db0f2;
@@ -227,8 +232,12 @@ h1, h2, h3, h4, h5, h6 {
   /* text-shadow: 3px 3px #d55448; */
   /* trying blue cobalt */
   /* text-shadow: 3px 3px #3a5199; */
-   text-shadow: 3px 3px #08045a;
-   
+   text-shadow: 3px 3px #08045a; 
+}
+
+.text-shadow-blue{
+  /* dark blue */
+   text-shadow: 3px 3px #08045a; 
 }
 
 .heading-size{
@@ -331,9 +340,6 @@ blockquote p {
 }
 
 .carousel-caption {
-    font-family: 'Poiret One', cursive;
-    /* font-family: 'Helvetica Neue', Helvetica, sans-serif; */ 
-    /* font-family: 'bilbo-regular', Helvetica, sans-serif; */
     font-size: 60px;
     font-weight:100;
     text-shadow: rgba(0,0,0,0.95) 2px 2px;
@@ -348,15 +354,11 @@ blockquote p {
 }
 
 .nav-sign-in-fonts{
-   font-family: 'Poiret One', cursive;
-   /* font-family: 'Helvetica Neue', Helvetica, sans-serif; */
    font-size: 1em;
    font-style: italic; 
 }
 
 .form-styles {
-   font-family: 'Poiret One', cursive;
-   /* font-family: 'Helvetica Neue', Helvetica, sans-serif; */
    font-size: 1.1em;
    font-style: normal;
    font-style: italic;  
@@ -364,9 +366,7 @@ blockquote p {
    color: #c5001a;
 }
 
-.index-place{
-   font-family: 'Poiret One', cursive;
-   /* font-family: 'Helvetica Neue', Helvetica, sans-serif; */
+.index-place{ 
    font-size: 1.1em;
    font-style: bold;
    font-style: italic;  
@@ -374,14 +374,10 @@ blockquote p {
    color: #c5001a;
 }
 .index-description{
-  font-family: 'Poiret One', cursive;
-  /* font-family: 'Helvetica Neue', Helvetica, sans-serif; */
   color: #08045a;
 }
 
 .nomster-button-styles{
-  font-family: 'Poiret One', cursive;
-  /* font-family: 'Helvetica Neue', Helvetica, sans-serif; */
   font-style: italic;
   background: #2d68c1;
   /* background: #558de2; */
@@ -396,8 +392,6 @@ blockquote p {
 }
 
 .devise-render a{
- font-family: 'Poiret One', cursive;
- /* font-family: 'Helvetica Neue', Helvetica, sans-serif; */
  font-style: italic; 
  color: ccc;
  
@@ -405,8 +399,6 @@ blockquote p {
 
 .devise-render a:link {
     text-decoration: none;
-    font-family: 'Poiret One', cursive;
-    /* font-family: 'Helvetica Neue', Helvetica, sans-serif; */
     font-style: italic; 
     color: ccc;
 }
@@ -430,15 +422,31 @@ blockquote p {
 }
 
 .nomster-text-font{
-     font-family: 'Poiret One', cursive;
-     font-style: bold;
+    /* font-family: 'Poiret One', cursive; */
+    /* font-style: bold; */
+    /* font-family: 'Josefin Sans', sans-serif; */
+    /* font-family: 'panefresco_1wtitalic'; */
+    /* font-family: 'bilbo-regular'; */
+    /* font-family: 'new_ciclefina_italic'; */
+    /* font-family: 'new_ciclegordita_italic', 'Arial', sans-serif; */
+    font-family: 'caviar_dreamsbold_italic';
+   
 }
+
+.nomster-text-font-not-bold{
+  font-family: 'caviar_dreamsitalic';
+}
+
 .nomster-red-color{
   color: #a10115;
 }
 
 .nomster-gold-star{
   color: yellow;
+}
+
+.index-user-heading-styles{
+  font-size: 2.75em
 }
 
 

@@ -1,25 +1,25 @@
 <!-- this is new_html app-views-devise-registrations ITS FOR SIGN UP -->
 <div class="booyah-box col-xs-8 col-xs-offset-2">
-	<h2 class="brand-font light-blue-color text-shadow-red heading-size" >Sign up!</h2>
+	<h2 class="brand-font light-blue-color text-shadow-blue heading-size" >Sign up!</h2>
 	<br />
 	<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
 	  <%= f.error_notification %>
 
-	  <div class="form-inputs form-styles">
+	  <div class="form-inputs form-styles nomster-text-font">
 	    <%= f.input :email, required: true, autofocus: true %>
 	    <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
 	    <%= f.input :password_confirmation, required: true %>
 	  </div>
 	  <br />
 	  <div class="form-actions">
-	    <%= f.button :submit, "Sign up!", class: 'btn btn-primary btn-lg nomster-button-styles' %>
+	    <%= f.button :submit, "Sign up!", class: 'btn btn-primary btn-lg nomster-button-styles nomster-text-font' %>
 	  </div>
 	<% end %>
 	<br />
 	
 	<% wanted = 0 %>
     <% if wanted == 1 %>
-    	<div class="devise-render">	
+    	<div class="nomster-text-font devise-render">	
 			<%= render "devise/shared/links" %>
 		</div>
 	<% end %>	

@@ -9,7 +9,7 @@
 		<% end %>
 	</div>
 	<div class="col-xs-9" >
-		<h1 class="brand-font light-blue-color text-shadow-red user-page-heading-size"><%= @user.email %></h1>
+		<h1 class="brand-font light-blue-color text-shadow-blue user-page-heading-size"><%= @user.email %></h1>
 		<h3 class="nomster-text-font">
 			Member Since: <%= @user.created_at.strftime("%B %d, %Y") %> 
 		</h3>
@@ -53,17 +53,49 @@
 </div>
 <div class="clear"></div>
 <br /><br />
-<h1 class="text-center brand-font light-blue-color text-shadow-red">My Comments</h1>
+<h1 class="text-center brand-font red-color text-shadow-blue index-user-heading-styles">My Comments</h1>
 <br /><br />
 <% @user.comments.each do |comment| %>
    <div class ="col-xs-12 col-sm-6">
-   	    <h2 class="text-center nomster-text-font"><%= link_to comment.place.name, place_path(comment.place) %></h2>
-		<blockquote class="sm-rotate">
+   	    <h2 class="text-center nomster-text-font red-color"><%= link_to comment.place.name, place_path(comment.place) %></h2>
+		<blockquote class="sm-grow">
 			<% if comment.humanized_rating.present? %>
 				<b><%= comment.humanized_rating %></b> -
 			<% end %>	
 			<%= comment.message %>
 			<small><%= comment.user.email %></small>
 		</blockquote>
+	</div>
+<% end %>
+
+<div class="clear"></div>
+<br /><br />
+<h1 class="text-center brand-font red-color text-shadow-blue index-user-heading-styles">My Places</h1>
+<br /><br />
+<% @user.places.each do |place| %>
+    	<div class="booyah-box col-xs-8 col-xs-offset-2">
+		<!-- h1 class="restaurant" -->
+    <h1 class="restaurant-listing-styles" >
+      <%= link_to place.name, place_path(place), :class => 'restaurant-link-styles' %></h1> 
+		<i class="index-place nomster-text-font"><%= place.address %></i><br />
+		<p class="index-description nomster-text-font"><%= place.description %></p><br />
+
+		 <% if place.user.present? %>
+     		 <small class="index-description"><%= place.user.email %></small>
+   		 <% end %>
+   		 <% if place.comments.present? %>
+   		 	<div class="col-xs-12 ">
+				  <blockquote class="sm-grow">
+				  	
+				    <% if place.comments.order("id ASC").last.humanized_rating.present? %>
+				      <b><%= place.comments.order("id ASC").last.humanized_rating %></b> -
+				    <% end %>
+				   
+				    <%= place.comments.order("id ASC").last.message %>
+				   
+				    <small><%= place.comments.order("id ASC").last.user.email %></small>
+				  </blockquote>
+			</div>
+		<% end %>	
 	</div>
 <% end %>

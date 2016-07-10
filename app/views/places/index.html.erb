@@ -7,6 +7,9 @@
     <li data-target="#carousel-example-generic" data-slide-to="1"></li>
     <li data-target="#carousel-example-generic" data-slide-to="2"></li>
     <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+   
+      
   </ol>
 
   <!-- Wrapper for slides -->
@@ -14,37 +17,47 @@
 
   	<!-- slider 1 -->
     <div class="item active ">
-      <%= image_tag 'slider1pano.jpg', class: 'img-responsive' %>
-      <div class="carousel-caption">
+      <%= image_tag 'lobster1_ready.jpg', class: 'img-responsive' %>
+      <div class="carousel-caption nomster-text-font-not-bold">
         Find Amazing Dishes!!!
       </div>
     </div>
 
 	<!-- slider 2 -->
     <div class="item ">
-      <%= image_tag 'slider2pano.jpg', class: 'img-responsive' %>
-      <div class="carousel-caption">
+      <%= image_tag 'bread_ready_2200px.jpg', class: 'img-responsive' %>
+      <div class="carousel-caption nomster-text-font-not-bold">
         Great cuisine!!!
       </div>
     </div>
 
 	<!-- slider 3 -->
     <div class="item ">
-      <%= image_tag 'slider3pano.jpg', class: 'img-responsive' %>
-      <div class="carousel-caption">
+      <%= image_tag 'great_chefs_ready.jpg', class: 'img-responsive' %>
+      <div class="carousel-caption nomster-text-font-not-bold">
         Amazing chefs!!!
       </div>
     </div>
     
     <!-- slider 4 -->
     <div class="item ">
-      <%= image_tag 'slider4pano.jpg', class: 'img-responsive' %>
-      <div class="carousel-caption">
+      <%= image_tag 'slider1pano.jpg', class: 'img-responsive' %>
+      <div class="carousel-caption nomster-text-font-not-bold">
         Great restaruants!!!
       </div>
     </div>
-  </div>
+  
 
+  
+
+   <!-- slider 5 -->
+    <div class="item ">
+      <%= image_tag 'donuts1_ready.jpg', class: 'img-responsive' %>
+      <div class="carousel-caption nomster-text-font-not-bold">
+        All that is crazy good!!!
+      </div>
+    </div>
+  </div>
   <!-- Controls -->
   <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
     <span class="glyphicon glyphicon-chevron-left"></span>
@@ -62,11 +75,11 @@
 		<!-- h1 class="restaurant" -->
     <h1 class="restaurant-listing-styles" >
       <%= link_to place.name, place_path(place), :class => 'restaurant-link-styles' %></h1> 
-		<i class="index-place"><%= place.address %></i><br />
+		<i class="index-place nomster-text-font"><%= place.address %></i><br />
 		<p class="index-description"><%= place.description %></p><br />
 
 		 <% if place.user.present? %>
-     		 <small class="index-description"><%= place.user.email %></small>
+     		 <small class="index-description nomster-text-font"><%= place.user.email %></small>
    		 <% end %>
    		 <% if place.comments.present? %>
    		 	<div class="col-xs-12 ">
