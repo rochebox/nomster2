@@ -10,43 +10,44 @@
 	</div>
 	<div class="col-xs-9" >
 		<h1 class="brand-font light-blue-color text-shadow-blue user-page-heading-size"><%= @user.email %></h1>
-		<h3 class="nomster-text-font">
+		<h3 class="nomster-text-font index-place">
 			Member Since: <%= @user.created_at.strftime("%B %d, %Y") %> 
 		</h3>
+		<br />
 		<!-- section for total comments -->
 		<% if @user.comments.count == 0 %>
-			<h4 class="nomster-text-font nomster-red-color">
+			<h5 class="nomster-text-font index-description">
 				<%= @user.comments.count %> comments so far. ...add a comment!
-			</h4>
+			</h5>
 		<% elsif @user.comments.count == 1 %>
-			<h4 class="nomster-text-font nomster-red-color">
+			<h5 class="nomster-text-font index-description">
 				<%= @user.comments.count %> comment so far. ...add more comments!
-			</h4>
+			</h5>
 		<% else %>
-		    <h4 class="nomster-text-font nomster-red-color">
+		    <h5 class="nomster-text-font index-description">
 				<%= @user.comments.count %> total comments. ... way to go!
-			</h4>
+			</h5>
 		<% end %>
 
 		<!-- section for total reviews (new places made) -->
 		<% if @user.comments.where(rating: '5_stars').count == 1 %>
-			<h4 class="nomster-text-font"><%= @user.comments.where(rating: '5_stars').count %> total 5 star review so far!
+			<h5 class="nomster-text-font"><%= @user.comments.where(rating: '5_stars').count %> total 5 star review so far!
 				<i class="glyphicon glyphicon-star nomster-gold-star"></i>
 				<i class="glyphicon glyphicon-star nomster-gold-star"></i>
 				<i class="glyphicon glyphicon-star nomster-gold-star"></i>
 				<i class="glyphicon glyphicon-star nomster-gold-star"></i>
 				<i class="glyphicon glyphicon-star nomster-gold-star"></i>
 
-			</h4>
+			</h5>
 		<% else %>
-			<h4 class="nomster-text-font"><%= @user.comments.where(rating: '5_stars').count %> total 5 star reviews!
+			<h5 class="nomster-text-font"><%= @user.comments.where(rating: '5_stars').count %> total 5 star reviews!
 						<i class="glyphicon glyphicon-star nomster-gold-star"></i>
 						<i class="glyphicon glyphicon-star nomster-gold-star"></i>
 						<i class="glyphicon glyphicon-star nomster-gold-star"></i>
 						<i class="glyphicon glyphicon-star nomster-gold-star"></i>
 						<i class="glyphicon glyphicon-star nomster-gold-star"></i> 
 
-			</h4>
+			</h5>
 		<% end %>
 	</div>
 	
@@ -57,7 +58,9 @@
 <br /><br />
 <% @user.comments.each do |comment| %>
    <div class ="col-xs-12 col-sm-6">
-   	    <h2 class="text-center nomster-text-font red-color"><%= link_to comment.place.name, place_path(comment.place) %></h2>
+   	    <h3 class="text-center">
+     	 <%= link_to comment.place.name, place_path(comment.place), :class => 'brand-font  text-shadow-blue restaurant-link-user-page index-user-heading-styles' %>
+  		</h3> 
 		<blockquote class="sm-grow">
 			<% if comment.humanized_rating.present? %>
 				<b><%= comment.humanized_rating %></b> -
@@ -75,13 +78,19 @@
 <% @user.places.each do |place| %>
     	<div class="booyah-box col-xs-8 col-xs-offset-2">
 		<!-- h1 class="restaurant" -->
-    <h1 class="restaurant-listing-styles" >
-      <%= link_to place.name, place_path(place), :class => 'restaurant-link-styles' %></h1> 
+		<!-- brand-font light-blue-color text-shadow-blue restaurant-link-styles -->
+  	 	<h1>
+     	 <%= link_to place.name, place_path(place), :class => 'brand-font light-blue-color text-shadow-blue restaurant-link-styles' %>
+  		</h1> 
 		<i class="index-place nomster-text-font"><%= place.address %></i><br />
-		<p class="index-description nomster-text-font"><%= place.description %></p><br />
+		<br />
+		<p class="index-description index-indent "><%= place.description %></p><br />
 
 		 <% if place.user.present? %>
-     		 <small class="index-description"><%= place.user.email %></small>
+     		 <div class="cobalt-color nomster-text-font index-indent">
+        		 <i class="glyphicon glyphicon-pencil"> </i>
+     		 	<small ><%= place.user.email %></small>
+       		 </div>
    		 <% end %>
    		 <% if place.comments.present? %>
    		 	<div class="col-xs-12 ">

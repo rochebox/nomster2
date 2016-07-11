@@ -22,24 +22,11 @@ body {
   background-image:  url('/assets/fork_knife2.png'), url('/assets/blue_white_tablecloth.jpg');
   background-position: left_bottom, left top;
   background-repeat: no-repeat, repeat;
-  /* background: url('/assets/blue_white_tablecloth.jpg'); */
-  /* a font stack from Chris Coiyers CSS Tricks article */
- 
 
- /* Modern Georgia-based serif stack */
-/* font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif; */
+  /* a font stack from Chris Coiyers CSS Tricks article */
 
 /* Traditional Garamond-based serif stack */
 font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif; 
-
-/* Helvetica/Arial-based sans serif stack */
-/*font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif; */
-
-/* Verdana-based sans serif stack */
-/*font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif; */
-
-/* Trebuchet font family stack */
-/* font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif; */
 
 }
 
@@ -119,7 +106,7 @@ h1, h2, h3, h4, h5, h6 {
     /* box-shadow: 0px 1px 3px #2a2a2a; */
 
      -moz-box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.5); 
- 	 -webkit-box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.5); 
+ 	   -webkit-box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.5); 
      box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.5); 
 
     /* box-shadow: 8px 8px 4px #888888; */
@@ -129,7 +116,7 @@ h1, h2, h3, h4, h5, h6 {
 	padding-top: 15px;  
 	/* font-family: 'gooddogregular', sans-serif; */
 	 /* font-family: 'sf_speakeasyregular', sans-serif;*/ 
-	 font-family: 'sf_speakeasyoblique', sans-serif; 
+	font-family: 'sf_speakeasyoblique', sans-serif; 
 	font-size: 50px;
 	/* background-color: #0033CC; */
   /* table cloth blue is --> 558de2  (dark) */
@@ -162,34 +149,57 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .restaurant-link-styles{
-  /* color: #399cf9;  blue like the border */
-  /* color: #58a8fb; */
-  color: 8db0f2;
-  font-family: 'sf_speakeasyoblique', sans-serif; 
-  text-shadow: 2px 2px #08045a;
   font-size: 1.3em;
 }
 
 .restaurant-link-styles:link {
     text-decoration: none;
-
+    font-size: 1.3em;
 }
 
 .restaurant-link-styles:visited {
     text-decoration: none;
-    /* color: #c5001a; tried red but its too much */
     color: #8db0f2;
+    text-shadow: 3px 3px #d55448;; 
+    
 
 }
 
 .restaurant-link-styles:hover {
     text-decoration: none;
-    color: #6897f0;
+    color: #558de2;
 }
 
 .restaurant-link-styles:active {
     text-decoration: none;
     color: #399cf9;
+}
+
+
+.restaurant-link-user-page{
+  font-size: 1.3em;
+  color: #558de2;
+}
+
+.restaurant-link-user-page:link {
+    text-decoration: none;
+    font-size: 1.3em;
+}
+
+.restaurant-link-user-page:visited {
+    text-decoration: none;
+    color: #558de2;
+    text-shadow: 3px 3px #d55448;; 
+}
+
+.restaurant-link-user-page:hover {
+    text-decoration: none;
+    color: #3a5199;
+}
+
+.restaurant-link-user-page:active {
+    text-decoration: none;
+    color: #3a5199;
 }
 
 
@@ -216,6 +226,23 @@ h1, h2, h3, h4, h5, h6 {
   color: #8db0f2;
 }
 
+.light-blue-color-2{
+  /* darker version of light blue */
+  color: #558de2;
+}
+
+
+.cobalt-color{
+  color: #3a5199;
+}
+/* carrot color #EE693f */
+/* tangerine #F69454 */
+/* pumpkin d55448 */
+
+.pumpkin-color{
+  color: #d55448;
+}
+
 .dark-blue-color{
   color: #08045a;
 }
@@ -225,6 +252,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .dark-blue-background{
   background: #558de2;
+}
+
+.grey-caption-color{
+  /* color: #e6e6e6; */
+  color: #f2f2f2;
 }
 
 .text-shadow-red{
@@ -309,7 +341,7 @@ blockquote p {
   
 }
 .sm-grow:hover{
-  transform: scale3d(1.25, 1.25, 1);
+  transform: scale3d(1.1, 1.1, 1);
 }
 
 .center-it{
@@ -332,6 +364,13 @@ blockquote p {
   padding: 0;
 }
 
+.photo-caption{
+   font-size: 1em; 
+   /* fire engine red c5001a */
+   color: #c5001a;
+  
+}
+
 .carousel-inner > .item > img, .carousel-inner > .item > a > img { 
    /* max-height: 550px; */
    max-height: 400px; 
@@ -340,9 +379,10 @@ blockquote p {
 }
 
 .carousel-caption {
-    font-size: 60px;
-    font-weight:100;
-    text-shadow: rgba(0,0,0,0.95) 2px 2px;
+    font-size: 125px;
+    /* font-weight:100; */
+    /* text-shadow: rgba(0,0,0,0.95) 2px 2px; */
+    text-shadow: #8db0f2 3px 3px 2px;
     background-color: rgba(0,0,0,0.5);
     width:100%;
     position:absolute;
@@ -375,6 +415,12 @@ blockquote p {
 }
 .index-description{
   color: #08045a;
+  font-weight: bold;
+  font-size: 1.25em;
+}
+
+.index-indent{
+  margin-left: 10px;
 }
 
 .nomster-button-styles{
@@ -389,6 +435,30 @@ blockquote p {
    /* background: #08045a; */
    background: #2d68c1;
    color: white;
+}
+
+
+.nomster-button-styles:active{
+   background: #8db0f2;
+   color: white;
+}
+
+.nomster-button-styles-delete{
+  font-style: italic;
+  color: #ccc;
+}
+
+.nomster-button-styles-delete:hover{
+   color: #fff;
+}
+
+.nomster-button-styles-close{
+  font-style: italic;
+  color: #ccc;
+}
+
+.nomster-button-styles-delete:hover{
+   color: black;
 }
 
 .devise-render a{
@@ -437,6 +507,10 @@ blockquote p {
   font-family: 'caviar_dreamsitalic';
 }
 
+.nomster-text-jinky{
+  font-family: 'jinkyregular';
+}
+
 .nomster-red-color{
   color: #a10115;
 }
@@ -447,6 +521,10 @@ blockquote p {
 
 .index-user-heading-styles{
   font-size: 2.75em
+}
+
+.modal-title-font-size{
+  font-size: 5em;
 }
 
 

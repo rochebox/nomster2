@@ -7,9 +7,7 @@
     <li data-target="#carousel-example-generic" data-slide-to="1"></li>
     <li data-target="#carousel-example-generic" data-slide-to="2"></li>
     <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
-   
-      
+    <li data-target="#carousel-example-generic" data-slide-to="4"></li>  
   </ol>
 
   <!-- Wrapper for slides -->
@@ -18,7 +16,8 @@
   	<!-- slider 1 -->
     <div class="item active ">
       <%= image_tag 'lobster1_ready.jpg', class: 'img-responsive' %>
-      <div class="carousel-caption nomster-text-font-not-bold">
+      <!--div class="carousel-caption nomster-text-font-not-bold"-->
+      <div class="carousel-caption nomster-text-jinky grey-caption-color">
         Find Amazing Dishes!!!
       </div>
     </div>
@@ -26,7 +25,8 @@
 	<!-- slider 2 -->
     <div class="item ">
       <%= image_tag 'bread_ready_2200px.jpg', class: 'img-responsive' %>
-      <div class="carousel-caption nomster-text-font-not-bold">
+     <!--div class="carousel-caption nomster-text-font-not-bold"-->
+     <div class="carousel-caption nomster-text-jinky grey-caption-color">
         Great cuisine!!!
       </div>
     </div>
@@ -34,7 +34,8 @@
 	<!-- slider 3 -->
     <div class="item ">
       <%= image_tag 'great_chefs_ready.jpg', class: 'img-responsive' %>
-      <div class="carousel-caption nomster-text-font-not-bold">
+      <!--div class="carousel-caption nomster-text-font-not-bold"-->
+      <div class="carousel-caption nomster-text-jinky grey-caption-color">
         Amazing chefs!!!
       </div>
     </div>
@@ -42,22 +43,22 @@
     <!-- slider 4 -->
     <div class="item ">
       <%= image_tag 'slider1pano.jpg', class: 'img-responsive' %>
-      <div class="carousel-caption nomster-text-font-not-bold">
-        Great restaruants!!!
+      <!--div class="carousel-caption nomster-text-font-not-bold"-->
+      <div class="carousel-caption nomster-text-jinky grey-caption-color">
+        Great restaurants!!!
       </div>
     </div>
-  
-
-  
 
    <!-- slider 5 -->
     <div class="item ">
       <%= image_tag 'donuts1_ready.jpg', class: 'img-responsive' %>
-      <div class="carousel-caption nomster-text-font-not-bold">
+      <!--div class="carousel-caption nomster-text-font-not-bold"-->
+      <div class="carousel-caption nomster-text-jinky grey-caption-color">
         All that is crazy good!!!
       </div>
     </div>
   </div>
+
   <!-- Controls -->
   <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
     <span class="glyphicon glyphicon-chevron-left"></span>
@@ -73,13 +74,18 @@
 <% @places.each do |place| %>
 	<div class="booyah-box col-xs-8 col-xs-offset-2">
 		<!-- h1 class="restaurant" -->
-    <h1 class="restaurant-listing-styles" >
-      <%= link_to place.name, place_path(place), :class => 'restaurant-link-styles' %></h1> 
-		<i class="index-place nomster-text-font"><%= place.address %></i><br />
-		<p class="index-description"><%= place.description %></p><br />
+    <h1>
+      <%= link_to place.name, place_path(place), :class => 'brand-font light-blue-color text-shadow-blue restaurant-link-styles' %>
+    </h1> 
+		<i class="index-place nomster-text-font"><%= place.address %></i>
+    <br /><br />
+		<p class="index-description index-indent"><%= place.description %></p><br />
 
 		 <% if place.user.present? %>
-     		 <small class="index-description nomster-text-font"><%= place.user.email %></small>
+        <div class="light-blue-color-2 nomster-text-font index-indent">
+         <i class="glyphicon glyphicon-pencil"> </i>
+     		 <small ><%= place.user.email %></small>
+        </div>
    		 <% end %>
    		 <% if place.comments.present? %>
    		 	<div class="col-xs-12 ">
