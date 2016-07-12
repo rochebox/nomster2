@@ -60,7 +60,7 @@
    <div class ="col-xs-12 col-sm-6">
    	    <h3 class="text-center">
    	    <!-- trying work around for heroku issue -->	
-   	    <% if comment.place.name.present? %>	
+   	    <% if comment.place.present? %>	
      	 <%= link_to comment.place.name, place_path(comment.place), :class => 'brand-font  text-shadow-blue restaurant-link-user-page index-user-heading-styles' %>
      	 <% end %>
   		</h3> 
