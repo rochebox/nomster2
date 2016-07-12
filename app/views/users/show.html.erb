@@ -16,15 +16,15 @@
 		<br />
 		<!-- section for total comments -->
 		<% if @user.comments.count == 0 %>
-			<h5 class="nomster-text-font index-description">
+			<h5 class="nomster-text-font">
 				<%= @user.comments.count %> comments so far. ...add a comment!
 			</h5>
 		<% elsif @user.comments.count == 1 %>
-			<h5 class="nomster-text-font index-description">
+			<h5 class="nomster-text-font">
 				<%= @user.comments.count %> comment so far. ...add more comments!
 			</h5>
 		<% else %>
-		    <h5 class="nomster-text-font index-description">
+		    <h5 class="nomster-text-font">
 				<%= @user.comments.count %> total comments. ... way to go!
 			</h5>
 		<% end %>
@@ -59,7 +59,10 @@
 <% @user.comments.each do |comment| %>
    <div class ="col-xs-12 col-sm-6">
    	    <h3 class="text-center">
+   	    <!-- trying work around for heroku issue -->	
+   	    <% if comment.place.name.present? %>	
      	 <%= link_to comment.place.name, place_path(comment.place), :class => 'brand-font  text-shadow-blue restaurant-link-user-page index-user-heading-styles' %>
+     	 <% end %>
   		</h3> 
 		<blockquote class="sm-grow">
 			<% if comment.humanized_rating.present? %>
